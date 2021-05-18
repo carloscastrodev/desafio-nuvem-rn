@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "850335736943",
+    "project_id": "spatial-edition-314016",
+    "storage_bucket": "spatial-edition-314016.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850335736943:android:076574cd5044650734199a",
+        "android_client_info": {
+          "package_name": "com.nuvem.desafiofrontend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850335736943-pu5mui7mfsiunrd1o7q54eek2529032q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIGsMX1QWGmLYV4nH34xDgAI19p0Pp8XQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850335736943-pu5mui7mfsiunrd1o7q54eek2529032q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

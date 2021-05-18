@@ -12,6 +12,11 @@ target 'desafioNuvemRN' do
     :hermes_enabled => false
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  rn_maps_path = '../node_modules/react-native-maps'
+  pod 'react-native-google-maps', :path => rn_maps_path
+  
   target 'desafioNuvemRNTests' do
     inherit! :complete
     # Pods for testing
