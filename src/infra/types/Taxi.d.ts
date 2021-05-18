@@ -1,11 +1,11 @@
-import {ImageURISource} from 'react-native';
+import {ImageSourcePropType} from 'react-native';
 
 export interface Taxi {
   id: number;
   nome: string;
   latitude: number;
   longitude: number;
-  imageUri?: ImageURISource;
+  imageUri?: ImageSourcePropType;
   precoKm?: number;
   limiteKm?: number;
   kmRodado?: number;
