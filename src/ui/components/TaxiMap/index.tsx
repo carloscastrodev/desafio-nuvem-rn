@@ -9,9 +9,10 @@ import styles from './styles';
 interface ComponentProps {
   taxis: Taxi[];
   mapRegion: Region;
+  onPressMarker: (taxi: Taxi) => any;
 }
 
-function TaxiMap({taxis, mapRegion}: ComponentProps) {
+function TaxiMap({taxis, mapRegion, onPressMarker}: ComponentProps) {
   return (
     <MapView
       style={styles.map}
@@ -23,7 +24,8 @@ function TaxiMap({taxis, mapRegion}: ComponentProps) {
         latitudeDelta: mapRegion.latitudeDelta,
         longitudeDelta: mapRegion.longitudeDelta,
       }}
-      zoomEnabled>
+      zoomEnabled
+      moveOnMarkerPress={false}>
       {taxis.map(taxi => (
         <Marker
           accessibilityRole="button"
@@ -34,7 +36,7 @@ function TaxiMap({taxis, mapRegion}: ComponentProps) {
             latitude: taxi.latitude,
             longitude: taxi.longitude,
           }}
-          onPress={() => null}
+          onPress={() => onPressMarker(taxi)}
           style={styles.icon}>
           <Image source={carImg} />
         </Marker>
