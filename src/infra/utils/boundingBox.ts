@@ -1,4 +1,8 @@
 export default function boundingBox(coords: [number, number][]): BoundingBox {
+  if (!coords.length) {
+    throw new Error('coords deve ter pelo menos um ponto');
+  }
+
   const _boundingBox = coords.reduce(
     (acc, coord) => {
       if (acc.minLat > coord[0]) {
