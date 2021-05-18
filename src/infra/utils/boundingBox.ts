@@ -1,33 +1,31 @@
-export default function boundingBox(coords: [number, number][]): {
-  x1: number;
-  y1: number;
-  x2: number;
-  y2: number;
-} {
+export default function boundingBox(coords: [number, number][]): BoundingBox {
   const _boundingBox = coords.reduce(
     (acc, coord) => {
-      if (acc.x1 > coord[0]) {
-        acc.x1 = coord[0];
+      if (acc.minLat > coord[0]) {
+        acc.minLat = coord[0];
       }
-      if (acc.x2 < coord[0]) {
-        acc.x2 = coord[0];
+      if (acc.maxLat < coord[0]) {
+        acc.maxLat = coord[0];
       }
-      if (acc.y1 > coord[1]) {
-        acc.y1 = coord[1];
+      if (acc.minLong > coord[1]) {
+        acc.minLong = coord[1];
       }
-      if (acc.y2 < coord[1]) {
-        acc.y2 = coord[1];
+      if (acc.maxLong < coord[1]) {
+        acc.maxLong = coord[1];
       }
 
       return acc;
     },
-
     {
-      x1: Number.MAX_VALUE,
-      y1: Number.MAX_VALUE,
-      x2: Number.MIN_VALUE,
-      y2: Number.MIN_VALUE,
+      minLat: Number.POSITIVE_INFINITY,
+      minLong: Number.POSITIVE_INFINITY,
+      maxLat: Number.NEGATIVE_INFINITY,
+      maxLong: Number.NEGATIVE_INFINITY,
+      center: [0, 0] as [number, number],
     },
   );
+  const xCenter = (_boundingBox.maxLat + _boundingBox.minLat) / 2;
+  const yCenter = (_boundingBox.maxLong + _boundingBox.minLong) / 2;
+  _boundingBox.center = [xCenter, yCenter];
   return _boundingBox;
 }
