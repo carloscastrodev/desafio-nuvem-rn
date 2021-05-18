@@ -7,7 +7,17 @@ const setupFiles = [
 
 module.exports = {
   preset: 'react-native',
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  rootDir: './',
+  moduleFileExtensions: [
+    'ts',
+    'tsx',
+    'js',
+    'jsx',
+    'json',
+    'node',
+    'jpeg',
+    'png',
+  ],
   transformIgnorePatterns: [`/node_modules/(?!${esModules})$`],
   setupFiles,
 };
