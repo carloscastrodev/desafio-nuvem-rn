@@ -1,4 +1,4 @@
-package com.desafionuvemrn;
+package com.nuvem.desafiofrontend;
 
 import com.facebook.react.ReactActivity;
 

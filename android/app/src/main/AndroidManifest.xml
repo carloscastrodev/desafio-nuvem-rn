@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.desafionuvemrn">
+  package="com.nuvem.desafiofrontend">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
