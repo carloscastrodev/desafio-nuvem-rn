@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+
 import Mapa from './Mapa';
 import Notificacoes from './Notificacoes';
 import routes from 'infra/enums/routes';
@@ -22,7 +23,11 @@ export default function Screens() {
           name={routes.notificacoes}
           component={Notificacoes}
           options={{
-            title: 'Ranking',
+            title: '',
+            headerStyle: {
+              backgroundColor: 'rgba(0,0,0,0)',
+              shadowColor: 'rgba(0,0,0,0)',
+            },
           }}
         />
       </Stack.Navigator>
