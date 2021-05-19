@@ -50,7 +50,9 @@ class TaxiModel implements StoreModel<Taxi> {
   }
 
   async wipe() {
-    await this.store.removeItem(this.key);
+    await this.store.removeItem(this.key, _ => {
+      // Alguma lógica para tratamento do erro...
+    });
   }
 }
 
