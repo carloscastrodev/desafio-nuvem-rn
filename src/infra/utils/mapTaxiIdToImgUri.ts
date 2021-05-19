@@ -6,7 +6,7 @@ import marioImg from 'assets/images/mario.jpeg';
 import matheusImg from 'assets/images/matheus.jpeg';
 import {ImageSourcePropType} from 'react-native';
 
-const mapTaxiIdToImgUri = (id: number): ImageSourcePropType | undefined => {
+function mapTaxiIdToImgUri(id: number): ImageSourcePropType | undefined {
   switch (id) {
     case 1:
       return leticiaImg;
@@ -23,6 +23,6 @@ const mapTaxiIdToImgUri = (id: number): ImageSourcePropType | undefined => {
     default:
       return undefined;
   }
-};
+}
 
 export default mapTaxiIdToImgUri;
