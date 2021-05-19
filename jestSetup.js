@@ -6,6 +6,21 @@ jest.mock('@react-native-async-storage/async-storage', () => {
   return mockAsyncStorage;
 });
 
+jest.mock('react-native-modal', props => {
+  const {View} = require('react-native');
+  const React = require('react');
+  class MockModal extends React.Component {
+    render() {
+      return <View {...this.props}>{this.props.children}</View>;
+    }
+  }
+
+  return {
+    __esModule: true,
+    default: MockModal,
+  };
+});
+
 jest.mock('react-native-maps', () => {
   const {View} = require('react-native');
   const React = require('react');
