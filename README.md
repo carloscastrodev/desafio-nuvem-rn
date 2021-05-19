@@ -36,6 +36,8 @@
  ```
  _No meu caso: sdk.dir = C:\\Users\\Carlos\\AppData\\Local\\Android\\sdk_ 
 
+ ### Especificações do Desafio
+ [Desafio](desafio.md)
 
  ### Observações
   - <b>Não foi testado no iOS, apenas Android.</b>
