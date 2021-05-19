@@ -33,6 +33,16 @@ function useTaxis() {
     setData(preparedData);
   }, []);
 
+  const handleUpdateId = useCallback(
+    async (id: number, payload: Taxi) => {
+      const taxiIdx = data.findIndex(t => t.id === id);
+      const copy = [...data];
+      copy[taxiIdx] = payload;
+      setData(copy);
+    },
+    [data],
+  );
+
   useEffect(() => {
     init();
   }, [init]);
@@ -52,6 +62,7 @@ function useTaxis() {
     data,
     isLoading,
     handleRefresh,
+    handleUpdateId,
   };
 }
 
