@@ -9,11 +9,11 @@
  ```
  npm install ou yarn
  ```
- 3. a <b>Para rodar no Android</b>
+ 3. <b>Para rodar no Android</b>
  ```
  npm run android ou yarn android
  ```
- 4. b <b>Para rodar no iOS</b>
+ 4. <b>Para rodar no iOS</b>
  ``` 
  npm run ios ou yarn ios
  ``` 
