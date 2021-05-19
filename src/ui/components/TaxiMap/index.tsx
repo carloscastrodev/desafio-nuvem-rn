@@ -15,10 +15,11 @@ interface ComponentProps {
 function TaxiMap({taxis, mapRegion, onPressMarker}: ComponentProps) {
   return (
     <MapView
+      testID="taxi-map"
       style={styles.map}
       provider={PROVIDER_GOOGLE}
       mapType="standard"
-      region={{
+      initialRegion={{
         latitude: mapRegion.latitude,
         longitude: mapRegion.longitude,
         latitudeDelta: mapRegion.latitudeDelta,
