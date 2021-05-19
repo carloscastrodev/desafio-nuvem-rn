@@ -2,7 +2,7 @@
 
 ### Como Rodar
  - <b>Clone esse repositório</b>
- ```git clone ```
+ ```git clone https://github.com/carloscastrodev/desafio-nuvem-rn.git```
  <br />
  - <b>Instale as dependências</b>
     - <b>Utilizando npm:</b> `npm install`
