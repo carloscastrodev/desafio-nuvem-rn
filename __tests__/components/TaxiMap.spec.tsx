@@ -22,7 +22,7 @@ describe('<TaxiMap />', () => {
     };
   });
 
-  it('O componente renderiza corretamente', async () => {
+  it('O componente renderiza corretamente.', async () => {
     render(
       <TaxiMap
         taxis={mockTaxis}
@@ -32,7 +32,7 @@ describe('<TaxiMap />', () => {
     );
   });
 
-  it('O componente renderiza marcadores', async () => {
+  it('O componente renderiza marcadores.', async () => {
     const {queryAllByTestId} = render(
       <TaxiMap
         taxis={mockTaxis}
@@ -44,7 +44,7 @@ describe('<TaxiMap />', () => {
     expect(markers).toHaveLength(3);
   });
 
-  it('Quando pressiona um marcador, deve chamar a callback passando um taxi como input', async () => {
+  it('Quando pressiona um marcador, deve chamar a callback passando um taxi como input.', async () => {
     const mockOnPressMarker = jest.fn();
     const {queryAllByTestId} = render(
       <TaxiMap
