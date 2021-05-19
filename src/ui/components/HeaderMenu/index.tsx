@@ -6,14 +6,15 @@ import styles from './styles';
 
 interface ComponentProps {
   notificationCount: number;
+  onPressRefresh: () => void;
 }
-function HeaderMenu({notificationCount}: ComponentProps) {
+function HeaderMenu({notificationCount, onPressRefresh}: ComponentProps) {
   const {navigate} = useNavigation();
   return (
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.menuButton}
-        onPress={() => null}
+        onPress={onPressRefresh}
         testID="db-taxi-refresh">
         <Avatar.Icon icon="refresh" size={36} />
       </TouchableOpacity>
